@@ -1,4 +1,4 @@
-CREATE TABLE `irctc_dwh.irctc_stream_tb` (
+CREATE TABLE `irctc.irctc_stream_tb` (
   row_key STRING,
   name STRING,
   age INT64,
