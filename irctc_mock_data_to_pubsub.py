@@ -3,9 +3,8 @@ import random
 import string
 import uuid
 import json
-from datetime import datetime, timedelta
+from datetime import timedelta,datetime
 
-# Configuration
 project_id = "de-scale"
 topic_id = "irctc-streaming-data"
 
@@ -18,7 +17,7 @@ def initialize_pubsub():
         print(f"Failed to initialize Pub/Sub client: {e}")
         raise
 
-# Generate mock data
+
 def generate_mock_data(num_rows):
     try:
         data = []
@@ -43,7 +42,7 @@ def generate_mock_data(num_rows):
         print(f"Failed to generate mock data: {e}")
         raise
 
-# Publish data to Pub/Sub
+
 def publish_to_pubsub(publisher, topic_path, data):
     try:
         for record in data:
@@ -57,7 +56,6 @@ def publish_to_pubsub(publisher, topic_path, data):
         print(f"Failed to publish data: {e}")
         raise
 
-# Main execution
 if __name__ == "__main__":
     try:
         publisher, topic_path = initialize_pubsub()
