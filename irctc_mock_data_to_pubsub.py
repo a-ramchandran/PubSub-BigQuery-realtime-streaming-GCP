@@ -63,7 +63,7 @@ if __name__ == "__main__":
         publisher, topic_path = initialize_pubsub()
 
         # Generate and publish mock data
-        mock_data = generate_mock_data(1000000)
+        mock_data = generate_mock_data(1)
         publish_to_pubsub(publisher, topic_path, mock_data)
 
     except Exception as e:
