@@ -53,7 +53,7 @@ def publish_to_pubsub(publisher, topic_path, data):
             print(f"Published message ID: {future.result()}")
         print(f"Published {len(data)} messages successfully.")
     except Exception as e:
-        print(f"Failed to publish data: {e}")
+        print(f"Failed to publish the data: {e}")
         raise
 
 if __name__ == "__main__":
